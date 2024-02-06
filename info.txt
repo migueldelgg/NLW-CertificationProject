@@ -1,0 +1,12 @@
+API REST
+- GET - Buscar uma informação
+- PUT - Alterar uma informação
+- POST - Inserir uma informação
+- DELETE - Remover uma informação
+- PATCH - Alterar PONTUAL uma informação
+
+Os tipos de paramêtros
+- Body - { PUT, POST, PATCH}
+- Query Params - http:/localhost:8085/users?nome=Miguel&idade=8 OPICIONAIS ou seja, 
+  posso receber minha requisição , sem ter os query params
+- Parametros de rotas - http:/localhost:8085/users/{nome}/{idade}
