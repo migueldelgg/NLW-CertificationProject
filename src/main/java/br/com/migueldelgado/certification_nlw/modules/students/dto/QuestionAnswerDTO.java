@@ -1,4 +1,4 @@
-package br.com.migueldelgado.certification_nlw.modules.students.DTO;
+package br.com.migueldelgado.certification_nlw.modules.students.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;

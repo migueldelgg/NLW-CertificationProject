@@ -12,10 +12,10 @@ import org.springframework.jdbc.datasource.DriverManagerDataSource;
 
 public class CreateSeed {
 
-    private final JdbcTemplate JdbcTemplate;
+    private final JdbcTemplate jdbcTemplate;
 
     public CreateSeed(DataSource dataSource) {
-        this.JdbcTemplate = new JdbcTemplate(dataSource);
+        this.jdbcTemplate = new JdbcTemplate(dataSource);
     }
 
     public static void main(String[] args) {
@@ -27,25 +27,21 @@ public class CreateSeed {
 
         CreateSeed createSeed = new CreateSeed(dataSource);
         createSeed.run(args);
-
-
     }
 
     public void run(String... args) {
         executeSqlFile("src/main/resources/create.sql");
     }
 
-    public void executeSqlFile(String filePath) {
+    private void executeSqlFile(String filePath) {
         try {
             String sqlScript = new String(Files.readAllBytes(Paths.get(filePath)));
 
-            JdbcTemplate.execute(sqlScript);
+            jdbcTemplate.execute(sqlScript);
 
             System.out.println("Seed realizado com sucesso");
-        }
-        catch(IOException e) {
-            System.out.println("Erro ao executar arquivo: " + e.getMessage());
+        } catch (IOException e) {
+            System.err.println("Erro ao executar arquivo " + e.getMessage());
         }
     }
-    
 }

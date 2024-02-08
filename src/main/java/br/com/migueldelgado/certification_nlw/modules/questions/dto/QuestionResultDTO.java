@@ -9,16 +9,14 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 @Data
-@AllArgsConstructor
 @NoArgsConstructor
+@AllArgsConstructor
 @Builder
 public class QuestionResultDTO {
-    
+
     private UUID id;
     private String technology;
     private String description;
 
     private List<AlternativesResultDTO> alternatives;
-
-    
- }
+}
