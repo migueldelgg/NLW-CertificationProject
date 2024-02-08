@@ -15,4 +15,6 @@ ORM -> Object Relational Mapper
 
 Repositório (Repository) -> Interagir com banco de dados.
 
-Da pra criar um .sql com os dados e fazer rodar no proprio main do java, sem usar nenhuma ferramenta.
+Da pra criar um .sql com os dados e fazer rodar no próprio main do java, sem usar nenhuma ferramenta.
+
+Entidade com a estrutura : email, technology e lista de perguntas com a resposta selecionada.
